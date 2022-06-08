@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React, { useRef } from 'react';
 import Typed from 'typed.js';
 
@@ -16,6 +15,7 @@ export const TextTypeAnimation: React.FC<Props> = ({ className, sentences }) => 
       strings: sentences,
       typeSpeed: 50,
       backSpeed: 50,
+      loop: true,
     };
 
     typed.current = new Typed(el.current!, options);
