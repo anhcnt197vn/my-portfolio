@@ -3,7 +3,7 @@ import { SocialButton } from '@/common/components/SocialButton';
 import { SocialTypeEnum } from '@/common/utils/types';
 import { AvatarFlip } from '@/common/components/AvatarFlip';
 import styles from './index.module.scss';
-import { FileIcon, HomeIcon, MessageIcon, ReadingIcon, UserIcon } from '@/common/icons';
+import classNames from 'classnames';
 
 export const SideBar = () => {
   return (
@@ -21,7 +21,7 @@ export const SideBar = () => {
         <nav className={styles.navbar}>
           <ul>
             <li>
-              <div className={styles.item}>
+              <div className={classNames(styles.item, styles.active)}>
                 <span>Home</span>
               </div>
             </li>

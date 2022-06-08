@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { AnimatedButton } from '@/common/components/AnimatedButton';
-import { TextTypeAnimation } from '@/common/components/TypeAnimation';
+import { TextTypeAnimation } from '@/common/components/TextTypeAnimation';
 import { useWindowSize } from '@/common/hooks/useWindowSize';
 import { DownloadIcon, EmailIcon } from '@/common/icons';
 import styles from './index.module.scss';
@@ -19,7 +19,7 @@ export const Greeting: React.FC = () => {
             I'm <span>B r o w n</span>
           </h2>
           <TextTypeAnimation
-            sequence={['Web Developer', 3000, 'Mobile Developer', 3000, 'Blogger . . . ', 3000]}
+            sentences={['Web Developer', 'Mobile Developer', 'Blogger . . . ']}
             className={styles.text}
           />
           <h4 className={styles.hobbies}>I have a passion for technology.</h4>
