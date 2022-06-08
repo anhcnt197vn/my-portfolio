@@ -1,0 +1,33 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.button {
+  @include button;
+  border: 1.5px solid #985321;
+  background: #985321;
+
+  &:hover {
+    background: lighten(#985321, 5%);
+    border: 1.5px solid lighten(#985321, 10%);
+  }
+
+  .text {
+    color: #ffffff;
+    @include flex-center;
+  }
+}
+
+.buttonOutline {
+  @include button;
+  border: 1.5px solid #985321;
+  background: #1c1c1c;
+
+  &:hover {
+    background: #985321;
+  }
+
+  .text {
+    color: #ffffff;
+    @include flex-center;
+  }
+}

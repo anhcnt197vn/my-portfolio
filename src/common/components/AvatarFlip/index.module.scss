@@ -1,0 +1,48 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.avatarBox {
+  position: relative;
+  background-color: transparent;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 8px solid $white_100;
+  overflow: hidden;
+  box-shadow: 4px 5px 9px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 4px 5px 9px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 4px 5px 9px 1px rgba(0, 0, 0, 0.5);
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.avatarBoxInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.avatarBoxFront,
+.avatarBoxBack {
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.avatarBox:hover .avatarBoxInner {
+  transform: rotateY(-180deg);
+}
+
+.avatarBoxBack {
+  transform: rotateY(-180deg);
+}

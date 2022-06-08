@@ -1,0 +1,30 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/variables';
+
+.container {
+  position: relative;
+  transition: transform .2s;
+  height: 40px;
+  width: 40px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.content {
+  @include flex-center();
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  border-radius: 50%;
+  background-color: $white_100;
+  box-shadow: 4px 5px 9px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 4px 5px 9px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 4px 5px 9px 1px rgba(0, 0, 0, 0.5);
+}
+
+.border {
+  border: 2px solid $white_100;
+}

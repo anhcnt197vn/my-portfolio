@@ -1,0 +1,70 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.sidebarContainer {
+  @include fixed(0, 0, unset, 0);
+  width: 300px;
+  background-color: $color_brown;
+  padding: 0 15px;
+  box-shadow: 4px 5px 5px 1px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 4px 5px 5px 1px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 4px 5px 5px 1px rgba(0, 0, 0, 0.6);
+
+  .profile {
+    @include flex-center(column);
+    z-index: 2;
+    position: relative;
+    margin-top: 10px;
+
+    .name {
+      padding-top: 15px;
+      font-family: $default_font;
+      color: $white_100;
+      font-size: 2rem;
+      margin: 0;
+      letter-spacing: -2px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .socialLinks {
+      @include flex-center();
+      margin-top: 25px;
+      width: 200px;
+      justify-content: space-between;
+      padding-bottom: 25px;
+      border-bottom: 5px solid white;
+    }
+
+    .navbar {
+      margin-top: 25px;
+      font-size: 1.6rem;
+      font-family: $default_font;
+      font-weight: 700;
+      letter-spacing: -2px;
+      line-height: 1;
+      color: $white_100;
+
+      li {
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 25px;
+        color: #a8a9b4;
+
+        span {
+          padding-right: 2px;
+        }
+
+        &:active {
+          color: white;
+          transform: scale(1.5);
+        }
+
+        &:hover {
+          transform: scale(2);
+          color: white;
+        }
+      }
+    }
+  }
+}
