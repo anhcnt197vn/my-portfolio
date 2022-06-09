@@ -44,10 +44,11 @@ export const SideBar: FC = () => {
 
     const handleScroll = () => {
       let current: any = '';
+      const defaultHeight = sections.item(0)?.clientHeight || 0;
 
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
-        if (window.scrollY >= sectionTop - 60) {
+        if (window.scrollY + defaultHeight > sectionTop + section.clientHeight / 2) {
           current = section.getAttribute('id');
         }
       });
@@ -85,8 +86,10 @@ export const SideBar: FC = () => {
                 <li
                   id={`id_${menuItem.item}`}
                   key={menuItem.item}
-                  onClick={() => handleMenuClicked(menuItem.item)}
                   className={styles.item}
+                  onClick={() => {
+                    handleMenuClicked(menuItem.item);
+                  }}
                 >
                   <span>{menuItem.name}</span>
                 </li>
