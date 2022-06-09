@@ -1,15 +1,15 @@
 import React, { ReactElement } from 'react';
 import MainLayout from '@/common/layout/MainLayout';
-import { Greeting } from '@/modules/greeting';
+import { Home } from '@/modules/home';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div>
-      <Greeting />
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 
-Home.getLayout = function getLayout(page: ReactElement) {
+HomePage.getLayout = function getLayout(page: ReactElement) {
   return <MainLayout>{page}</MainLayout>;
 };

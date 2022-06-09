@@ -5,13 +5,13 @@ import { useWindowSize } from '@/common/hooks/useWindowSize';
 import { DownloadIcon, EmailIcon } from '@/common/icons';
 import styles from './index.module.scss';
 
-export const Greeting: React.FC = () => {
+export const Hero: React.FC = () => {
   const { width } = useWindowSize();
 
   const imageSize = width! <= 1440 ? 400 : 450;
 
   return (
-    <section className={styles.greeting}>
+    <section id="hero" className={styles.greeting}>
       <div className={styles.content}>
         <div className={styles.leftContent}>
           <h4>Hi</h4>
