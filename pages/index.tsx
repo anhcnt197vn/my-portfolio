@@ -1,13 +1,9 @@
 import React, { ReactElement } from 'react';
-import MainLayout from '@/common/layout/MainLayout';
+import MainLayout from 'src/layout/MainLayout';
 import { Home } from '@/modules/home';
 
 export default function HomePage() {
-  return (
-    <>
-      <Home />
-    </>
-  );
+  return <Home />;
 }
 
 HomePage.getLayout = function getLayout(page: ReactElement) {

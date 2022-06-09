@@ -20,6 +20,7 @@
       "@/components/*": ["src/common/components/*"],
       "@/utils/*": ["src/common/utils/*"],
       "@/modules/*": ["src/modules/*"],
+      "@/store/*": ["src/store/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

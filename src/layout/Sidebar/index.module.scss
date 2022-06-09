@@ -1,5 +1,5 @@
-@import '../../../../styles/variables';
-@import '../../../../styles/mixins';
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 .sidebarContainer {
   @include fixed(0, 0, unset, 0);
@@ -55,7 +55,7 @@
           padding-right: 2px;
         }
 
-        .active {
+        &.active {
           color: white;
           transform: scale(1.5);
         }
