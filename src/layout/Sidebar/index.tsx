@@ -17,14 +17,14 @@ const menuItems = [
     name: 'About',
   },
   {
-    href: '#resume',
-    item: MenuItems.RESUME,
-    name: 'Resume',
-  },
-  {
     href: '#article',
     item: MenuItems.ARTICLE,
     name: 'Article',
+  },
+  {
+    href: '#resume',
+    item: MenuItems.RESUME,
+    name: 'Resume',
   },
   {
     href: '#contact',

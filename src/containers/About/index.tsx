@@ -7,24 +7,19 @@ import { useInView } from 'react-intersection-observer';
 import styles from './index.module.scss';
 
 export const About: FC = () => {
-  const { ref, inView } = useInView({
-    threshold: 0,
-    triggerOnce: true,
-  });
+  const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
     <section id="about" className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.titleWrapper}>
-          <SectionTitle title="About" />
-          <div className={styles.title}>
-            <p>Hi there! Thanks for visiting my portfolio.</p>
-            <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-              consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-              sit in iste officiis commodi quidem hic quas.
-            </p>
-          </div>
+        <SectionTitle title="About" />
+        <div className={styles.title}>
+          <p>Hi there! Thanks for visiting my portfolio.</p>
+          <p>
+            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.
+          </p>
         </div>
         <div ref={ref} className={styles.content}>
           <div className={classNames(styles.avatar, { [styles.inView]: inView })}>
@@ -72,11 +67,6 @@ export const About: FC = () => {
                   <ChevronRightIcon />
                   <strong>Freelance:</strong>
                   <span>Available</span>
-                </li>
-                <li>
-                  <ChevronRightIcon />
-                  <strong>Hobbies:</strong>
-                  <span>Technology, Football, Game, Music, ...</span>
                 </li>
               </ul>
             </div>
