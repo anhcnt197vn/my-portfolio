@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
             sentences={['Web Developer', 'Mobile Developer', 'Blogger . . . ']}
             className={styles.text}
           />
-          <h4 className={styles.hobbies}>I have a passion for technology.</h4>
+          <p className={styles.hobbies}>I have a passion for technology.</p>
           <div className={styles.buttonContainer}>
             <AnimatedButton className={styles.button} onClick={() => {}}>
               <EmailIcon />

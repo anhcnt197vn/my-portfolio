@@ -6,11 +6,11 @@ export const ArticleItem: FC = () => {
   return (
     <div className={styles.articleContainer}>
       <div className={styles.thumbnail}>
-        <Image src="/images/greeting-bg.webp" layout="fill" objectFit="cover" />
+        <Image src="/images/greeting-bg.webp" alt="greeting-background" layout="fill" objectFit="cover" />
       </div>
       <div className={styles.content}>
         <div className={styles.tag}># NextJS</div>
-        <a className={styles.title}>
+        <a href="https://www.google.com/" className={styles.title}>
           <h1>The React Framework for Production</h1>
         </a>
         <div className={styles.description}>

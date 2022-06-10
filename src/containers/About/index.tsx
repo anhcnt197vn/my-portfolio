@@ -23,7 +23,7 @@ export const About: FC = () => {
         </div>
         <div ref={ref} className={styles.content}>
           <div className={classNames(styles.avatar, { [styles.inView]: inView })}>
-            <Image src="/images/avatar-back.png" layout="fill" objectFit="contain" />
+            <Image src="/images/avatar-back.png" alt="avatar-back" layout="fill" objectFit="contain" />
           </div>
           <div className={classNames(styles.rightContent, { [styles.inView]: inView })}>
             <h3>Web Developer & Mobile Developer.</h3>

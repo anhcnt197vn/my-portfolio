@@ -74,10 +74,10 @@ export const SideBar: FC = () => {
       <div className={styles.profile}>
         <AvatarFlip />
         <div className={styles.socialLinks}>
-          <SocialButton socialType={SocialTypeEnum.FACEBOOK} />
-          <SocialButton socialType={SocialTypeEnum.INSTAGRAM} />
-          <SocialButton socialType={SocialTypeEnum.LINKEDIN} />
-          <SocialButton socialType={SocialTypeEnum.GITHUB} />
+          <SocialButton socialType={SocialTypeEnum.FACEBOOK} link="https://www.google.com/" />
+          <SocialButton socialType={SocialTypeEnum.INSTAGRAM} link="https://www.google.com/" />
+          <SocialButton socialType={SocialTypeEnum.LINKEDIN} link="https://www.google.com/" />
+          <SocialButton socialType={SocialTypeEnum.GITHUB} link="https://www.google.com/" />
         </div>
         <nav className={styles.navbar} id="navbar">
           <ul>

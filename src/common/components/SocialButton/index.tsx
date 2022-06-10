@@ -19,7 +19,7 @@ export const SocialButton: React.FC<Props> = ({ socialType, link }) => {
   return (
     <a href={link || '#'} className={styles.container}>
       <div className={classNames(styles.content, { [styles.border]: socialType === SocialTypeEnum.GITHUB })}>
-        <Image src={socialImages[socialType]} layout="fill" />
+        <Image src={socialImages[socialType]} layout="fill" alt="social-image" />
       </div>
     </a>
   );
