@@ -6,10 +6,10 @@ export const AvatarFlip: React.FC = () => {
     <div className={styles.avatarBox}>
       <div className={styles.avatarBoxInner}>
         <div className={styles.avatarBoxFront}>
-          <Image src="/images/avatar.png" layout="fill" quality={80} alt="avatar" />
+          <Image src="/images/avatar.jpg" layout="fill" quality={80} alt="avatar" />
         </div>
         <div className={styles.avatarBoxBack}>
-          <Image src="/images/avatar-back-main.png" layout="fill" quality={80} alt="avatar-back" />
+          <Image src="/images/avatar-back-main.jpg" layout="fill" quality={80} alt="avatar-back" />
         </div>
       </div>
     </div>
