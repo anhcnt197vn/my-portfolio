@@ -6,7 +6,7 @@ export const ArticleItem: FC = () => {
   return (
     <div className={styles.articleContainer}>
       <div className={styles.thumbnail}>
-        <Image src="/images/greeting-bg.jpg" layout="fill" objectFit="cover" />
+        <Image src="/images/greeting-bg.webp" layout="fill" objectFit="cover" />
       </div>
       <div className={styles.content}>
         <div className={styles.tag}># NextJS</div>
