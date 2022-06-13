@@ -1,9 +1,11 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { SocialButton } from '@/common/components/SocialButton';
 import { SocialTypeEnum } from '@/common/utils/types';
 import { AvatarFlip } from '@/common/components/AvatarFlip';
 import { MenuItems } from '@/store/slices/menuItemSlice';
 import styles from './index.module.scss';
+import { CloseIcon, MenuIcon } from '@/common/icons';
+import classNames from 'classnames';
 
 const menuItems = [
   {
@@ -34,9 +36,7 @@ const menuItems = [
 ];
 
 export const SideBar: FC = () => {
-  const handleMenuClicked = (menuItem: MenuItems) => {
-    document.getElementById(menuItem)?.scrollIntoView();
-  };
+  const [isCollapsed, setCollapsed] = useState<boolean>(true);
 
   useEffect(() => {
     const sections = document.querySelectorAll('section');
@@ -69,35 +69,49 @@ export const SideBar: FC = () => {
     };
   }, []);
 
+  const toggleMenuButton = () => {
+    setCollapsed(!isCollapsed);
+  };
+
+  const handleMenuClicked = (menuItem: MenuItems) => {
+    setCollapsed(true);
+    document.getElementById(menuItem)?.scrollIntoView();
+  };
+
   return (
-    <header className={styles.sidebarContainer}>
-      <div className={styles.profile}>
-        <AvatarFlip />
-        <div className={styles.socialLinks}>
-          <SocialButton socialType={SocialTypeEnum.FACEBOOK} link="https://www.google.com/" />
-          <SocialButton socialType={SocialTypeEnum.INSTAGRAM} link="https://www.google.com/" />
-          <SocialButton socialType={SocialTypeEnum.LINKEDIN} link="https://www.google.com/" />
-          <SocialButton socialType={SocialTypeEnum.GITHUB} link="https://www.google.com/" />
+    <>
+      <header className={classNames(styles.sidebarContainer, { [styles.active]: !isCollapsed })}>
+        <div className={styles.profile}>
+          <AvatarFlip />
+          <div className={styles.socialLinks}>
+            <SocialButton socialType={SocialTypeEnum.FACEBOOK} link="https://www.google.com/" />
+            <SocialButton socialType={SocialTypeEnum.INSTAGRAM} link="https://www.google.com/" />
+            <SocialButton socialType={SocialTypeEnum.LINKEDIN} link="https://www.google.com/" />
+            <SocialButton socialType={SocialTypeEnum.GITHUB} link="https://www.google.com/" />
+          </div>
+          <nav className={styles.navbar} id="navbar">
+            <ul>
+              {menuItems.map((menuItem) => {
+                return (
+                  <li
+                    id={`id_${menuItem.item}`}
+                    key={menuItem.item}
+                    className={styles.item}
+                    onClick={() => {
+                      handleMenuClicked(menuItem.item);
+                    }}
+                  >
+                    <span>{menuItem.name}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
         </div>
-        <nav className={styles.navbar} id="navbar">
-          <ul>
-            {menuItems.map((menuItem) => {
-              return (
-                <li
-                  id={`id_${menuItem.item}`}
-                  key={menuItem.item}
-                  className={styles.item}
-                  onClick={() => {
-                    handleMenuClicked(menuItem.item);
-                  }}
-                >
-                  <span>{menuItem.name}</span>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </div>
-    </header>
+      </header>
+      <button className={styles.toggleButton} onClick={toggleMenuButton}>
+        {isCollapsed ? <MenuIcon className={styles.menuIcon} /> : <CloseIcon className={styles.menuIcon} />}
+      </button>
+    </>
   );
 };

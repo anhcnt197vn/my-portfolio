@@ -152,3 +152,33 @@ export function ChevronRightIcon() {
     </svg>
   );
 }
+
+export function MenuIcon({ className = '' }) {
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#ffffff"
+      viewBox="0 0 24 24"
+      width="96px"
+      height="96px"
+    >
+      <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z" />
+    </svg>
+  );
+}
+
+export function CloseIcon({ className = '' }) {
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#ffffff"
+      viewBox="0 0 24 24"
+      width="96px"
+      height="96px"
+    >
+      <path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z" />
+    </svg>
+  );
+}

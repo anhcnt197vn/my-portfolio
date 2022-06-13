@@ -163,3 +163,11 @@
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
+
+@mixin padding-container() {
+  padding-left: 300px;
+
+  @media only screen and (max-width: $breakpoint_large) {
+    padding-left: unset;
+  }
+}
